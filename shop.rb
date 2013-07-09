@@ -7,6 +7,8 @@ get '/' do
 end
 
 post '/shop' do
+  raise 'hi'
+
   'Thanks for your order'
 end
 

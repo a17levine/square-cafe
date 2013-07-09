@@ -16,6 +16,26 @@ $(document).ready(function() {
       console.log("current total is: " + total);
     }));
     $('form').append(anotherForm);
-    $('#cost').text("$" + total/100);
+    $('#cost').text("$" + (total/100).toFixed(2));
   });
+
+  $(function() {  
+    $(".button").click(function(event) {
+      // alert("hello world!"); 
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "/shop",
+        data: "hollaback",
+        success: function(responseText){
+          // alert(responseText);
+          },
+        error: function(){
+          alert("error!!!!!");
+          },
+        });
+      $(".button").attr("disabled", "disabled");
+    });  
+  });  
+
 });
