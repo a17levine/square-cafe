@@ -7,7 +7,7 @@ get '/' do
 end
 
 post '/shop' do
-  raise 'hi'
+  # raise 'hi'
 
   'Thanks for your order'
 end

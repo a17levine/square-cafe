@@ -16,7 +16,7 @@
     <div id="main">
       <div id="sidebar">
         <div id="picture">
-          <img src="cappucino.jpg" width="160" />
+          <img id="sidebar-picture" src="cappucino.jpg" width="160" />
         </div>
 
         <a class="twitter-timeline" href="https://twitter.com/MakerSquareCafe" data-widget-id="353241485782700032">Tweets by @MakerSquareCafe</a>
@@ -34,21 +34,21 @@
             <select name="drink[]">
               <option>Please select a drink</option>
               <optgroup label="Coffee">
-                <option data-price="200" value="house">House Coffee — $2.00</option>
-                <option data-price="200" value="iced">Iced Coffee — $2.00</option>
-                <option data-price="200" value="bold">Bold Coffee — $2.00</option>
+                <option data-price="200" value="house" data-image="coffee-cup-intro.jpg">House Coffee — $2.00</option>
+                <option data-price="200" value="iced" data-image="Pacific_Northwest_Iced_Coffee.jpg">Iced Coffee — $2.00</option>
+                <option data-price="200" value="bold" data-image="Be_Bold_coffee_mug.jpg">Bold Coffee — $2.00</option>
               </optgroup>
               <optgroup label="Espresso">
                 <!-- See this 'data-price' attribute? -->
                 <!-- We can create arbitrary attributes in HTML5 by prepending the attribute name with 'data-' -->
-                <option data-price="300" value="americano">Americano — $3.00</option>
-                <option data-price="200" value="espresso">Espresso — $2.00</option>
-                <option data-price="350" value="cappucino">Cappucino — $3.50</option>
+                <option data-price="300" value="americano" data-image="coffee-cup-intro.jpg">Americano — $3.00</option>
+                <option data-price="200" value="espresso" data-image="bean-around-the-world-02.jpg">Espresso — $2.00</option>
+                <option data-price="350" value="cappucino" data-image="cappucino.jpg">Cappucino — $3.50</option>
               </optgroup>
               <optgroup label="Teas">
-                <option data-price="300" value="green">Green Tea — $3.00</option>
-                <option data-price="300" value="black">Black Tea — $3.00</option>
-                <option data-price="300" value="peach">Peach Tea — $3.00</option>
+                <option data-price="300" value="green" data-image="green.jpg">Green Tea — $3.00</option>
+                <option data-price="300" value="black" data-image="black-tea.jpg">Black Tea — $3.00</option>
+                <option data-price="300" value="peach" data-image="Peach_Tea_jpg_300x300_crop-scale_upscale_q85.jpg">Peach Tea — $3.00</option>
               </optgroup>
 
             </select>

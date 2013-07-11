@@ -1,3 +1,8 @@
+function showSelectedPhoto(selectionObject) {
+  var image = $(selectionObject).find(":selected").first().attr('data-image');
+  $('#sidebar-picture').attr({src: image});
+}
+
 $(document).ready(function() {
   how_many_forms = $('form').length;
   var iterator = 1;
@@ -6,7 +11,6 @@ $(document).ready(function() {
 
   
   on('change', 'select', function(){
-    console.log("This is the select");
     var anotherForm = "<select name='drink[" + iterator + "]'>" + $('select').first().html() + "</select>";
     $('dd#drinks').first().text(iterator)
     iterator += 1;
@@ -17,6 +21,9 @@ $(document).ready(function() {
     }));
     $('form').append(anotherForm);
     $('#cost').text("$" + (total/100).toFixed(2));
+    showSelectedPhoto(this);
+    console.log("This is 'this' and grabbing the first selected thing");
+    console.log();
   });
 
   $(function() {  
